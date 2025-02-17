@@ -30,3 +30,9 @@ def registration(request):
             return HttpResponse("Invalid Data")
 
     return render(request,'registration.html',d)
+
+def home(request):
+    return render(request,'home.html')
+
+def user_login(request):
+    return render(request,'user_login.html')

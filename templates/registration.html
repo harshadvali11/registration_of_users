@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'dummy.html' %}
+{% block title %}
+<title>Registration</title>
+{% endblock %}
+{% block body_block %}
+
     <center>
         <h1>Registration</h1>
         <form method="POST" enctype="multipart/form-data">
@@ -13,7 +11,6 @@
             {{ EUMFO.as_p}}
             {{EPMFO.as_p}}
             <input type="submit" value="registration">
-    5 </form>
+     </form>
     </center>
-</body>
-</html>
+    {% endblock %}
