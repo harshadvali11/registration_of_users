@@ -20,7 +20,11 @@
 
         <a href="{% url 'registration' %}" class="nav-link bg-danger">Registration</a>
         <a href="{% url 'home' %}" class="nav-link bg-danger">Home Page</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'user_logout' %}" class="nav-link bg-danger">user logout</a>
+        {% else %}
         <a href="{% url 'user_login' %}" class="nav-link bg-danger">Login Page</a>
+        {% endif %}
     </nav>
 
     <!-- Optional JavaScript; choose one of the two! -->
